@@ -1,0 +1,14 @@
+version: '3'
+services:
+    php:
+      image: webgarden/php:7.1
+      container_name: sql-file-parser-php
+      volumes:
+        - ./:/var/docker
+      links:
+        - mysql
+    mysql:
+        image: mysql:latest
+        container_name: sql-file-parser-mysql
+        env_file:
+            - .env

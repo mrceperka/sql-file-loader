@@ -1,0 +1,26 @@
+{
+  "name": "mrceperka/sql-file-loader",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "Load queries from big sql files",
+  "authors": [
+    {
+      "name": "MrCeperka",
+      "email": "mrceperka@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "MrCeperka\\SqlFileLoader\\": "src/"
+    }
+  },
+  "scripts": {
+    "test:up": "php ./tests/_up.php",
+    "test": "composer run-script test:up && ./vendor/bin/phpunit && composer run-script test:down",
+    "test:coverage-text": "composer run-script test:up && ./vendor/bin/phpunit --coverage-text && composer run-script test:down",
+    "test:down": "php ./tests/_down.php"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^6.4"
+  }
+}
