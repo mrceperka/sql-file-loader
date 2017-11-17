@@ -17,7 +17,7 @@
   "scripts": {
     "test:up": "php ./tests/_up.php",
     "test": "composer run-script test:up && ./vendor/bin/phpunit && composer run-script test:down",
-    "test:coverage-text": "composer run-script test:up && ./vendor/bin/phpunit --coverage-text && composer run-script test:down",
+    "test:circle": "composer run-script test:up && --log-junit \"${CIRCLE_TEST_REPORTS}/phpunit/junit.xml\" --coverage-clover \"${CIRCLE_ARTIFACTS}/phpunit/clover.xml\" --coverage-html \"${CIRCLE_ARTIFACTS}/phpunit/html\" && composer run-script test:down",
     "test:down": "php ./tests/_down.php"
   },
   "require-dev": {
