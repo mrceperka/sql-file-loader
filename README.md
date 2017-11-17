@@ -1,4 +1,5 @@
 # SQL File Loader
+[![CircleCI](https://circleci.com/gh/mrceperka/sql-file-loader.svg?style=svg)](https://circleci.com/gh/mrceperka/sql-file-loader)
 ---
 ## Installation
 `composer require mrceperka/sql-file-loader`
