@@ -20,6 +20,9 @@
     "test:circle": "composer run-script test:up && ./vendor/bin/phpunit --log-junit \"${CIRCLE_TEST_REPORTS}/phpunit/junit.xml\" --coverage-clover \"${CIRCLE_ARTIFACTS}/phpunit/clover.xml\" --coverage-html \"${CIRCLE_ARTIFACTS}/phpunit/html\" && composer run-script test:down",
     "test:down": "php ./tests/_down.php"
   },
+  "require": {
+    "php": ">=7"
+  },
   "require-dev": {
     "phpunit/phpunit": "^6.4"
   }
